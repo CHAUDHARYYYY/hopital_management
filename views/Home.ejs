@@ -1,75 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/Header'); -%>
+    <main class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Hospital Name - Welcome</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+        <div class="getting-started">
+            <div class="main-left">
+                <button class="btn">Get started<i class="fa-solid fa-arrow-right"></i>
 
-<body>
-    <header>
-        <nav>
-            <h2>DOCLAB</h2>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
-            <h1>About Us</h1>
-            <p>Welcome to Hospital Name, a leading healthcare provider in the region. Our mission is to provide
-                high-quality medical care to our patients and their families in a compassionate and caring environment.
-            </p>
-        </section>
-
+                </button>
+            </div>
+            <div class="main-right">
+                <ul class="right-ul">
+                    <li>Registration and Enquiry management</li>
+                    <li>Appoinments</li>
+                    <li>Casualty and Emergency</li>
+                    <li>Pharmacy system</li>
+                    <li>Pathology</li>
+                </ul>
+            </div>
+        </div>
         <section id="services">
             <h1>Our Services</h1>
-            <ul>
-                <li>Emergency care</li>
-                <li>Inpatient care</li>
-                <li>Outpatient care</li>
-                <li>Diagnostic services</li>
-                <li>Surgical services</li>
-            </ul>
+
         </section>
 
-        <section id="doctors">
+        <!-- <section id="doctors">
             <h1>Our Doctors</h1>
             <ul>
                 <li>Dr. John Smith, Cardiologist</li>
                 <li>Dr. Jane Doe, Oncologist</li>
                 <li>Dr. David Lee, Neurologist</li>
             </ul>
-        </section>
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <p>If you have any questions or concerns, please don't hesitate to contact us.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+        </section> -->
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
 
-                <button type="submit">Send</button>
-            </form>
-        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2023 Hospital Name. All rights reserved.</p>
-    </footer>
-    <script src="app.js"></script>
-
-</body>
-
-</html>
+    <%- include('partials/Footer'); -%>

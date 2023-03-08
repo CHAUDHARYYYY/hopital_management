@@ -1,32 +1,26 @@
-<!DOCTYPE html>
-<html>
+<%- include('partials/Header'); -%>
 
-<head>
-    <title>Alphabet Chart with Image Mapping</title>
-</head>
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Our new hospital is a state-of-the-art medical facility that has been designed to provide the highest level
+            of care to patients. With its modern infrastructure and advanced medical technology, the hospital is
+            equipped to handle a wide range of medical conditions and emergencies.
 
-<body>
-    <h1>Click on any Alphabet</h1>
+            The hospital is staffed by a team of highly qualified and experienced healthcare professionals who are
+            dedicated to providing compassionate care to patients. They are trained in the latest medical techniques and
+            procedures, and work closely with each other to ensure that patients receive the best possible care.
 
-    <img id="map" src="https://i.ibb.co/bb1hP2q/alphabet-grid-12516.jpg" usemap="#mainmap" />
+            The hospital is equipped with the latest medical equipment, including advanced diagnostic tools, surgical
+            equipment, and life support systems. This enables doctors and nurses to quickly and accurately diagnose and
+            treat patients, improving their chances of recovery.
 
-    <map name="map" id="mainmap"></map>
+            In addition to its medical facilities, the hospital also provides a range of amenities to ensure that
+            patients are comfortable and well-cared for during their stay. These amenities include comfortable and
+            spacious patient rooms, a cafeteria, and a gift shop.
 
-    <script>
-        var html_string = ""
-
-        for (i = 0; i < 5; i++)
-            for (j = 0; j < (i == 4 ? 2 : 6); j++)
-                html_string += `<area shape="rect" coords="${[
-                        j * 107,
-                        i * 107,
-                        (j + 1) * 107,
-                        (i + 1) * 107
-                    ]
-                    }" href="https://en.wikipedia.org/wiki/${String.fromCharCode(65 + i * 6 + j)}" target="_blank"/>`
-
-        document.getElementById('mainmap').innerHTML += html_string
-    </script>
-</body>
-
-</html>
+            Overall, our new hospital is a world-class medical facility that is designed to meet the needs of patients
+            in the 21st century. Whether you need emergency care or are undergoing a complex medical procedure, you can
+            trust that you will receive the highest level of care at our hospital.
+        </p>
+    </section>
+    <%- include('partials/Footer'); -%>
