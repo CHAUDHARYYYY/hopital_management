@@ -14,7 +14,7 @@ const userSchema = {
   password: String,
 };
 // mongoose model
-const Cat = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
 // get routes
 app.get("/", (req, res) => {
