@@ -1,10 +1,17 @@
 import express from "express";
 import mongoose from "mongoose";
+import path from "path";
+import url from "url";
+import bodyParser from "body-parser";
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 import authRoutes from "./routes/auth.js";
 const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use("/auth", authRoutes);
 // database connection
 mongoose
@@ -32,6 +39,15 @@ app.get("/contact", (req, res) => {
 });
 app.get("/signup", (req, res) => {
   res.render("Signup");
+});
+app.post("/signup", (req, res) => {
+  let obj = req.body;
+  console.log(obj);
+
+  res.json({
+    message: "user signed up",
+    data: obj,
+  });
 });
 
 // post routes
