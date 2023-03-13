@@ -5,6 +5,7 @@ import url from "url";
 import bodyParser from "body-parser";
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+import User from "./models/UserModel.js";
 import authRoutes from "./routes/auth.js";
 const app = express();
 
@@ -15,16 +16,8 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 // database connection
 mongoose
-  .connect("mongodb://0.0.0.0:27017/userDb")
+  .connect("mongodb://0.0.0.0:27017/epicsDb")
   .then(() => console.log("success connecting to db"));
-// user schema
-const userSchema = {
-  name: String,
-  email: String,
-  password: String,
-};
-// mongoose model
-const User = mongoose.model("User", userSchema);
 
 // get routes
 app.get("/", (req, res) => {
@@ -37,18 +30,44 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("Contact");
 });
+
+///////////////////////////////////////////// auth routes /////////////////////////////////////////////////
 app.get("/signup", (req, res) => {
   res.render("Signup");
 });
-app.post("/signup", (req, res) => {
-  let obj = req.body;
-  console.log(obj);
 
-  res.json({
-    message: "user signed up",
-    data: obj,
+app.post("/signup", (req, res) => {
+  let data = req.body;
+  const newUser = new User({
+    email: data.email,
+    password: data.password,
   });
+
+  newUser
+    .save()
+    .then(() => console.log("user from frontend saved succesfully"));
+
+  res.redirect("/");
 });
 
-// post routes
+///////////////////////////////////////////// auth routes /////////////////////////////////////////////////
+app.get("/login", (req, res) => {
+  res.render("Login");
+});
+
+app.post("/login", (req, res) => {
+  let data = req.body;
+  const newUser = new User({
+    email: data.email,
+    password: data.password,
+  });
+
+  newUser
+    .save()
+    .then(() => console.log("user from frontend saved succesfully"));
+
+  res.redirect("/");
+});
+
+// listen route
 app.listen(3000, (req, res) => console.log("Listning on port 3000"));
