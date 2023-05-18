@@ -15,8 +15,7 @@ main {
 }
 
 header {
-  background-color: #0066cc;
-  color: #fff;
+  color: black;
 }
 
 nav {
@@ -35,7 +34,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: black;
   text-decoration: none;
 }
 
@@ -67,11 +66,6 @@ form {
 label {
   font-weight: bold;
   margin-bottom: 0.5rem;
-}
-
-#about {
-  min-height: 100vh;
-  padding: 2rem;
 }
 
 input,
@@ -141,36 +135,23 @@ footer {
   align-items: center;
 }
 
-.card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  min-height: fit-content;
-  margin: 1.2rem;
-  overflow: hidden;
-  border-radius: 2rem;
-  background: linear-gradient(to right, #00b4db, #0083b0);
-}
-
-.card-body {
-  padding: 1.2em;
-}
-
-.card-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-size: 16px;
+.left-heading {
+  font-size: 3rem;
   color: white;
-  margin-bottom: 20px;
+  webkit-text-stroke-width: 2rem;
 }
-
+.left-para {
+  font-size: 2rem;
+}
+.main-left {
+  background: rgba(0, 0, 0, 0.442);
+  padding: 6rem;
+  width: 100%;
+}
 .btn {
   display: inline-block;
-  background-color: #007bff;
+  margin: 2rem 0;
+  background-color: #e15b5b;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -179,7 +160,7 @@ footer {
 }
 
 .btn:hover {
-  background-color: #0069d9;
+  background-color: #ec2c2c;
 }
 
 #services {
@@ -215,4 +196,54 @@ input {
 textarea {
   border: 3px solid rgb(40, 40, 93);
   padding: 1em;
+}
+
+/* cards  */
+
+.cards {
+  display: flex;
+  padding: 2rem;
+  gap: 2em;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+  border-radius: 2rem;
+  padding: 1em;
+}
+
+.card h1 {
+  color: #e15b5b;
+}
+
+.card p {
+  color: rgb(63, 63, 63);
+}
+.doc-img {
+  height: 20rem;
+  border-radius: 2rem;
+}
+#about {
+  padding: 4rem;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+.about-head {
+  color: #e15b5b;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.fa-arrow-up {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
 }
