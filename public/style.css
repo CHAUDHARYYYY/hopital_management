@@ -32,10 +32,17 @@ nav ul {
   gap: 3rem;
   justify-content: space-between;
 }
+nav ul a:hover {
+  background-color: #e15b5b;
+  color: white;
+  border-radius: 1rem;
+}
 
 nav a {
   color: black;
+  padding: 0.5em 1em;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -142,6 +149,7 @@ footer {
 }
 .left-para {
   font-size: 2rem;
+  color: white;
 }
 .main-left {
   background: rgba(0, 0, 0, 0.442);
@@ -156,11 +164,12 @@ footer {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: #ec2c2c;
+  transform: scale(1.025);
 }
 
 #services {
@@ -246,4 +255,9 @@ footer {
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-arrow-up:hover {
+  color: #e15b5b;
 }
