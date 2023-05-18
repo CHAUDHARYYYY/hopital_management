@@ -114,28 +114,4 @@ app.post("/login", (req, res) => {
 
 // api
 
-// const options = {
-//   method: "GET",
-//   url: "https://drug-info-and-price-history.p.rapidapi.com/1/druginfo",
-//   params: { drug: "advil" },
-//   headers: {
-//     "X-RapidAPI-Key": "68e3afab45mshd5227285343f15bp1ba902jsn0b7786f3a169",
-//     "X-RapidAPI-Host": "drug-info-and-price-history.p.rapidapi.com",
-//   },
-// };
-
-// async function getMedicineData() {
-//   try {
-//     const res = await fetch(
-//       "https://drug-info-and-price-history.p.rapidapi.com/1/druginfo",
-//       options
-//     );
-//     const data = await res.json();
-//     console.log(data);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// getMedicineData();
-
 app.listen(3000, (req, res) => console.log("listning to port 3000"));
